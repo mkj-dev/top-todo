@@ -1,12 +1,26 @@
-input {
-    display: block;
-    margin: 4px 0;
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
 }
 
-#description {
+#main {
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+form {
+    padding: 8px;
+}
+
+input, textarea {
+    margin: 4px 0;
     display: block;
+    width: 100%;
+    padding: 8px 0;
 }
 
 #addTask {
+    padding: 10px;
     margin-top: 8px;
 }
