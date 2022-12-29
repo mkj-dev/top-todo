@@ -4,12 +4,18 @@ body {
     margin: 0;
 }
 
+#create-todo-btn {
+    margin: 20px;
+    padding: 10px;
+}
+
 #main {
     max-width: 400px;
     margin: 20px auto;
 }
 
 form {
+    display: none;
     padding: 8px;
 }
 
