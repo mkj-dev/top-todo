@@ -9,6 +9,14 @@ body {
     padding: 10px;
 }
 
+#close-form-btn {
+    font-size: 24px;
+    color: red;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
 #main {
     max-width: 400px;
     margin: 20px auto;
