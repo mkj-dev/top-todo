@@ -20,5 +20,7 @@ addTaskBtn.addEventListener("click", () => {
 
   const task = new Task(taskTitle.value, taskDesc.value, taskDeadline.value);
   taskArray.push(task);
-  
+
+  // Save the taskArray in local storage
+  localStorage.setItem("tasks", JSON.stringify(taskArray));
 });
