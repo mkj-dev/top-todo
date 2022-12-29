@@ -1,7 +1,6 @@
 import Task from "./modules/Task.js";
 
-const mainContent = document.querySelector("#main");
-const testDiv = document.querySelector("#test");
+const tasks = document.querySelector("#tasks");
 const taskArray = [];
 
 // Form elements
@@ -13,9 +12,13 @@ const taskDeadline = document.querySelector("#deadline");
 const addTaskBtn = document.querySelector("#addTask");
 
 addTaskBtn.addEventListener("click", () => {
+
+  if (!taskTitle.value || !taskDesc.value || !taskDeadline.value) {
+    alert("Please fill in all fields");
+    return;
+  }
+
   const task = new Task(taskTitle.value, taskDesc.value, taskDeadline.value);
   taskArray.push(task);
-  testDiv.innerText = JSON.stringify(task);
-  console.log(taskArray);
-  return taskArray;
+  
 });
