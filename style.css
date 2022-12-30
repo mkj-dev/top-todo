@@ -2,11 +2,26 @@ body {
     width: 100vw;
     height: 100vh;
     margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #create-todo-btn {
-    margin: 20px;
-    padding: 10px;
+    margin: 32px;
+    padding: 8px 20px;
+    background-color: #bcb5f7;
+    border: 0;
+    border-radius: 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.delete-task-btn {
+    padding: 8px 20px;
+    background-color: #f0683f;
+    border: 0;
+    border-radius: 8px;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
 #close-form-btn {
