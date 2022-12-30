@@ -43,4 +43,7 @@ addTodoBtn.addEventListener("click", () => {
 
   // Save the todoArray in local storage
   localStorage.setItem("todos", JSON.stringify(todoArray));
+
+  // Refresh the page after adding todo
+  document.location.reload(true)
 });
