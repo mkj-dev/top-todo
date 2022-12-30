@@ -41,8 +41,19 @@ addTodoBtn.addEventListener("click", () => {
   const todo = new Todo(todoTitle.value, todoDesc.value, todoDeadline.value);
   todoArray.push(todo);
 
-  // Save the todoArray in local storage
-  localStorage.setItem("todos", JSON.stringify(todoArray));
+  if (!localStorage['todos']) {
+    // Save the todoArray in local storage
+    localStorage.setItem("todos", JSON.stringify(todoArray));
+  } else {
+    const todosString = localStorage['todos'];
+    const todosArray = JSON.parse(todosString);
+
+    todosArray.push(todo);
+
+    const updatedTodosString = JSON.stringify(todosArray);
+    // Set the todos key to the new JSON string value
+    localStorage['todos'] = updatedTodosString;
+  }
 
   // Refresh the page after adding todo
   document.location.reload(true)
