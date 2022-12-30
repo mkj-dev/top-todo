@@ -59,6 +59,13 @@ input, textarea {
     cursor: pointer;
 }
 
+.todo {
+    background-color: #f0f0f0;
+    border: 1px solid #cccccc;
+    padding: 10px;
+    margin-bottom: 10px;
+  }  
+
 form {
     animation: fadeInDown 1s;
   }
