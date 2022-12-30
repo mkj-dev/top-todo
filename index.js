@@ -39,9 +39,9 @@ addTodoBtn.addEventListener("click", () => {
   }
 
   const todo = new Todo(todoTitle.value, todoDesc.value, todoDeadline.value);
-  todoArray.push(todo);
-
+  
   if (!localStorage['todos']) {
+    todoArray.push(todo);
     // Save the todoArray in local storage
     localStorage.setItem("todos", JSON.stringify(todoArray));
   } else {
