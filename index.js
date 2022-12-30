@@ -1,46 +1,46 @@
-import Task from "./modules/Task.js";
+import Todo from "./modules/Todo.js";
 
 // Form elements
-const taskTitle = document.querySelector("#title");
-const taskDesc = document.querySelector("#description");
-const taskDeadline = document.querySelector("#deadline");
-const addTaskBtn = document.querySelector("#addTask");
-const tasks = document.querySelector("#tasks");
-const taskArray = [];
+const todoTitle = document.querySelector("#title");
+const todoDesc = document.querySelector("#description");
+const todoDeadline = document.querySelector("#deadline");
+const addTodoBtn = document.querySelector("#addTodo");
+const todos = document.querySelector("#todos");
+const todoArray = [];
 
-// Retrieve the taskArray from local storage
-const storedTasks = localStorage.getItem("tasks");
+// Retrieve the todoArray from local storage
+const storedTodos = localStorage.getItem("todos");
 
-if (storedTasks) {
-  const parsedTasks = JSON.parse(storedTasks);
+if (storedTodos) {
+  const parsedTodos = JSON.parse(storedTodos);
 
-  parsedTasks.forEach((task, index) => {
-    const taskElement = document.createElement("div");
-    taskElement.innerHTML = `<h3>${task.title}</h3><p>${task.description}</p><p>${task.deadline}</p><button class="delete-task-btn">Delete</button>`;
-    tasks.appendChild(taskElement);
+  parsedTodos.forEach((todo, index) => {
+    const todoElement = document.createElement("div");
+    todoElement.innerHTML = `<h3>${todo.title}</h3><p>${todo.description}</p><p>${todo.deadline}</p><button class="delete-todo-btn">Delete</button>`;
+    todos.appendChild(todoElement);
   
-    const deleteBtn = taskElement.querySelector(".delete-task-btn");
+    const deleteBtn = todoElement.querySelector(".delete-todo-btn");
     deleteBtn.addEventListener("click", () => {
-      // Remove the task from the taskArray
-      parsedTasks.splice(index, 1);
-      // Save the updated taskArray in local storage
-      localStorage.setItem("tasks", JSON.stringify(parsedTasks));
-      // Remove the task element from the tasks div
-      taskElement.remove();
+      // Remove the todo from the todoArray
+      parsedTodos.splice(index, 1);
+      // Save the updated todoArray in local storage
+      localStorage.setItem("todos", JSON.stringify(parsedTodos));
+      // Remove the todo element from the todos div
+      todoElement.remove();
     });
   });
 }
 
-addTaskBtn.addEventListener("click", () => {
+addTodoBtn.addEventListener("click", () => {
 
-  if (!taskTitle.value || !taskDesc.value || !taskDeadline.value) {
+  if (!todoTitle.value || !todoDesc.value || !todoDeadline.value) {
     alert("Please fill in all fields");
     return;
   }
 
-  const task = new Task(taskTitle.value, taskDesc.value, taskDeadline.value);
-  taskArray.push(task);
+  const todo = new Todo(todoTitle.value, todoDesc.value, todoDeadline.value);
+  todoArray.push(todo);
 
-  // Save the taskArray in local storage
-  localStorage.setItem("tasks", JSON.stringify(taskArray));
+  // Save the todoArray in local storage
+  localStorage.setItem("todos", JSON.stringify(todoArray));
 });

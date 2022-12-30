@@ -15,7 +15,7 @@ body {
     cursor: pointer;
 }
 
-.delete-task-btn {
+.delete-todo-btn {
     padding: 8px 20px;
     background-color: #f0683f;
     border: 0;
@@ -49,7 +49,7 @@ input, textarea {
     padding: 8px 0;
 }
 
-#addTask {
+#addTodo {
     padding: 10px;
     margin-top: 8px;
 }
