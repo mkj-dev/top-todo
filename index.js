@@ -16,6 +16,7 @@ if (storedTodos) {
 
   parsedTodos.forEach((todo, index) => {
     const todoElement = document.createElement("div");
+    todoElement.classList.add("todo");
     todoElement.innerHTML = `<h3>${todo.title}</h3><p>${todo.description}</p><p>${todo.deadline}</p><button class="delete-todo-btn">Delete</button>`;
     todos.appendChild(todoElement);
   
