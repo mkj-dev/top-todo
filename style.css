@@ -73,6 +73,8 @@ label {
 
 .todo {
     /* IE6+ Compatibility */
+    border-radius: .5rem;
+    min-width: 200px;
     background: rgb(255,255,255);
     background: -moz-linear-gradient(125deg, rgba(255,255,255,1) 40%, rgba(131,148,172,1) 100%);
     background: -webkit-linear-gradient(125deg, rgba(255,255,255,1) 40%, rgba(131,148,172,1) 100%);
@@ -80,7 +82,6 @@ label {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#8394ac",GradientType=1);
     padding: .75rem;
     margin-bottom: .75rem;
-    min-width: fit-content;
 }
 
 /* ANIMATION */
