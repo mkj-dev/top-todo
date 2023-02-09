@@ -19,6 +19,14 @@ body {
     max-width: 100%;
     display: none;
     padding: .5rem;
+    border-radius: .5rem;
+    /* IE6+ Compatibility */
+    background: rgb(255,255,255);
+    background: -moz-linear-gradient(125deg, rgba(255,255,255,1) 40%, rgba(131,148,172,1) 100%);
+    background: -webkit-linear-gradient(125deg, rgba(255,255,255,1) 40%, rgba(131,148,172,1) 100%);
+    background: linear-gradient(125deg, rgba(255,255,255,1) 40%, rgba(131,148,172,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#8394ac",GradientType=1);
+    margin-bottom: 5rem;
 }
 
 input,
@@ -72,9 +80,9 @@ label {
 }
 
 .todo {
-    /* IE6+ Compatibility */
     border-radius: .5rem;
     min-width: 200px;
+    /* IE6+ Compatibility */
     background: rgb(255,255,255);
     background: -moz-linear-gradient(125deg, rgba(255,255,255,1) 40%, rgba(131,148,172,1) 100%);
     background: -webkit-linear-gradient(125deg, rgba(255,255,255,1) 40%, rgba(131,148,172,1) 100%);
