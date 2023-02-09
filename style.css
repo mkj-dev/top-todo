@@ -1,81 +1,101 @@
 body {
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* MAIN */
 #main {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 1.5rem auto;
+    flex-wrap: wrap;
 }
 
-#create-todo-btn {
-  margin: 32px;
-  padding: 8px 20px;
-  border: 0;
-  cursor: pointer;
-}
-
-.delete-todo-btn {
-  padding: 8px 20px;
-  border: 0;
-  cursor: pointer;
-}
-
-#close-form-btn {
-  font-size: 24px;
-  color: red;
-  display: flex;
-  justify-content: flex-end;
-  cursor: pointer;
-}
-
-#main {
-  max-width: 400px;
-  margin: 20px auto;
-}
-
-form {
-  display: none;
-  padding: 8px;
+/* TODO FORM */
+#todo-form {
+    min-width: 100%;
+    display: none;
+    padding: .5rem;
 }
 
 input,
 textarea {
-  margin: 4px 0;
-  display: block;
-  width: 100%;
-  padding: 8px 0;
+    margin: .5rem 0;
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+}
+
+label {
+    margin: .5rem 0;
+    font-weight: 600;
+}
+
+/* BUTTONS */
+#create-todo-btn {
+    margin: 2rem;
+    padding: .5rem 1.5rem;
+    border: 0;
+    cursor: pointer;
+}
+
+.delete-todo-btn {
+    padding: .5rem 1.5rem;
+    border: 0;
+    cursor: pointer;
+}
+
+#close-form-btn {
+    font-size: 1.5rem;
+    color: red;
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
 }
 
 #addTodo {
-  margin-top: 10px;
-  padding: 8px 20px;
-  border: 0;
-  cursor: pointer;
+    margin-top: .75rem;
+    padding: .5rem 1.5rem;
+    border: 0;
+    cursor: pointer;
+}
+
+/* TODOS */
+#todos {
+    display: flex;
+    gap: 5%;
+    justify-content: center;
 }
 
 .todo {
-  background-color: #f0f0f0;
-  border: 1px solid #cccccc;
-  padding: 10px;
-  margin-bottom: 10px;
+    background: rgb(51, 220, 240);
+    background: -moz-linear-gradient(125deg, rgba(51, 220, 240, 1) 5%, rgba(7, 87, 203, 1) 100%);
+    background: -webkit-linear-gradient(125deg, rgba(51, 220, 240, 1) 5%, rgba(7, 87, 203, 1) 100%);
+    background: linear-gradient(125deg, rgba(51, 220, 240, 1) 5%, rgba(7, 87, 203, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#33dcf0", endColorstr="#0757cb", GradientType=1);
+    padding: .75rem;
+    margin-bottom: .75rem;
+    min-width: fit-content;
 }
 
+/* ANIMATION */
 form {
-  animation: fadeInDown 1s;
-  margin-bottom: 1rem;
+    animation: fadeInDown 1s;
+    margin-bottom: 1rem;
 }
 
 @keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
