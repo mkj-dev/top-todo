@@ -15,7 +15,8 @@ body {
 
 /* TODO FORM */
 #todo-form {
-    min-width: 100%;
+    min-width: 400px;
+    max-width: 100%;
     display: none;
     padding: .5rem;
 }
