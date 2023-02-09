@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
 body {
-    
     background: url('./jean-philippe-delberghe.jpg');
     max-width: 100vw;
     min-height: 100vh;
@@ -43,9 +42,12 @@ label {
 
 /* BUTTONS */
 #create-todo-btn {
-    margin: 2rem;
+    display: block;
+    background: rgba(255, 255, 255, 0.3);
+    color: #000;
+    margin: 2rem auto;
     padding: .5rem 1.5rem;
-    border: 0;
+    border: 2px solid black;
     cursor: pointer;
 }
 
@@ -82,11 +84,11 @@ label {
     border-radius: .5rem;
     min-width: 200px;
     /* IE6+ Compatibility */
-    background: rgba(255,255,255, 0.3);
-    background: -moz-linear-gradient(125deg, rgba(255,255,255, 0.3) 40%, rgba(131,148,172,0.3) 100%);
-    background: -webkit-linear-gradient(125deg, rgba(255,255,255,0.3) 40%, rgba(131,148,172,0.3) 100%);
-    background: linear-gradient(125deg, rgba(255,255,255,0.3) 40%, rgba(131,148,172,0.3) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#8394ac",GradientType=1);
+    background: rgba(255, 255, 255, 0.3);
+    background: -moz-linear-gradient(125deg, rgba(255, 255, 255, 0.3) 40%, rgba(131, 148, 172, 0.3) 100%);
+    background: -webkit-linear-gradient(125deg, rgba(255, 255, 255, 0.3) 40%, rgba(131, 148, 172, 0.3) 100%);
+    background: linear-gradient(125deg, rgba(255, 255, 255, 0.3) 40%, rgba(131, 148, 172, 0.3) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#8394ac", GradientType=1);
     padding: .75rem;
     margin-bottom: .75rem;
 }
