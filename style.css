@@ -1,4 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
 body {
+    
+    background: url('./jean-philippe-delberghe.jpg');
     max-width: 100vw;
     min-height: 100vh;
     margin: 0;
@@ -7,6 +11,7 @@ body {
 
 /* MAIN */
 #main {
+    font-family: 'Roboto', sans-serif;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -20,12 +25,6 @@ body {
     display: none;
     padding: .5rem;
     border-radius: .5rem;
-    /* IE6+ Compatibility */
-    background: rgb(255,255,255);
-    background: -moz-linear-gradient(125deg, rgba(255,255,255,1) 40%, rgba(131,148,172,1) 100%);
-    background: -webkit-linear-gradient(125deg, rgba(255,255,255,1) 40%, rgba(131,148,172,1) 100%);
-    background: linear-gradient(125deg, rgba(255,255,255,1) 40%, rgba(131,148,172,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#8394ac",GradientType=1);
     margin-bottom: 5rem;
 }
 
@@ -83,10 +82,10 @@ label {
     border-radius: .5rem;
     min-width: 200px;
     /* IE6+ Compatibility */
-    background: rgb(255,255,255);
-    background: -moz-linear-gradient(125deg, rgba(255,255,255,1) 40%, rgba(131,148,172,1) 100%);
-    background: -webkit-linear-gradient(125deg, rgba(255,255,255,1) 40%, rgba(131,148,172,1) 100%);
-    background: linear-gradient(125deg, rgba(255,255,255,1) 40%, rgba(131,148,172,1) 100%);
+    background: rgba(255,255,255, 0.3);
+    background: -moz-linear-gradient(125deg, rgba(255,255,255, 0.3) 40%, rgba(131,148,172,0.3) 100%);
+    background: -webkit-linear-gradient(125deg, rgba(255,255,255,0.3) 40%, rgba(131,148,172,0.3) 100%);
+    background: linear-gradient(125deg, rgba(255,255,255,0.3) 40%, rgba(131,148,172,0.3) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#8394ac",GradientType=1);
     padding: .75rem;
     margin-bottom: .75rem;
