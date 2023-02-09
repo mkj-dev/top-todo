@@ -12,50 +12,50 @@ const todoArray = [];
 const storedTodos = localStorage.getItem("todos");
 
 if (storedTodos) {
-  const parsedTodos = JSON.parse(storedTodos);
+    const parsedTodos = JSON.parse(storedTodos);
 
-  parsedTodos.forEach((todo, index) => {
-    const todoElement = document.createElement("div");
-    todoElement.classList.add("todo");
-    todoElement.innerHTML = `<h3>${todo.title}</h3><p>${todo.description}</p><p>${todo.deadline}</p><button class="delete-todo-btn btn btn-danger">Delete</button>`;
-    todos.appendChild(todoElement);
-  
-    const deleteBtn = todoElement.querySelector(".delete-todo-btn");
-    deleteBtn.addEventListener("click", () => {
-      // Remove the todo from the todoArray
-      parsedTodos.splice(index, 1);
-      // Save the updated todoArray in local storage
-      localStorage.setItem("todos", JSON.stringify(parsedTodos));
-      // Remove the todo element from the todos div
-      todoElement.remove();
+    parsedTodos.forEach((todo, index) => {
+        const todoElement = document.createElement("div");
+        todoElement.classList.add("todo");
+        todoElement.innerHTML = `<h3>${todo.title}</h3><p>${todo.description}</p><p>${todo.deadline}</p><button class="delete-todo-btn btn btn-danger">Delete</button>`;
+        todos.appendChild(todoElement);
+
+        const deleteBtn = todoElement.querySelector(".delete-todo-btn");
+        deleteBtn.addEventListener("click", () => {
+            // Remove the todo from the todoArray
+            parsedTodos.splice(index, 1);
+            // Save the updated todoArray in local storage
+            localStorage.setItem("todos", JSON.stringify(parsedTodos));
+            // Remove the todo element from the todos div
+            todoElement.remove();
+        });
     });
-  });
 }
 
 addTodoBtn.addEventListener("click", () => {
 
-  if (!todoTitle.value || !todoDesc.value || !todoDeadline.value) {
-    alert("Please fill in all fields");
-    return;
-  }
+    if (!todoTitle.value || !todoDesc.value || !todoDeadline.value) {
+        alert("Please fill in all fields");
+        return;
+    }
 
-  const todo = new Todo(todoTitle.value, todoDesc.value, todoDeadline.value);
-  
-  if (!localStorage['todos']) {
-    todoArray.push(todo);
-    // Save the todoArray in local storage
-    localStorage.setItem("todos", JSON.stringify(todoArray));
-  } else {
-    const todosString = localStorage['todos'];
-    const todosArray = JSON.parse(todosString);
+    const todo = new Todo(todoTitle.value, todoDesc.value, todoDeadline.value);
 
-    todosArray.push(todo);
+    if (!localStorage['todos']) {
+        todoArray.push(todo);
+        // Save the todoArray in local storage
+        localStorage.setItem("todos", JSON.stringify(todoArray));
+    } else {
+        const todosString = localStorage['todos'];
+        const todosArray = JSON.parse(todosString);
 
-    const updatedTodosString = JSON.stringify(todosArray);
-    // Set the todos key to the new JSON string value
-    localStorage['todos'] = updatedTodosString;
-  }
+        todosArray.push(todo);
 
-  // Refresh the page after adding todo
-  document.location.reload(true)
+        const updatedTodosString = JSON.stringify(todosArray);
+        // Set the todos key to the new JSON string value
+        localStorage['todos'] = updatedTodosString;
+    }
+
+    // Refresh the page after adding todo
+    document.location.reload(true)
 });
