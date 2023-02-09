@@ -1,82 +1,81 @@
 body {
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-#create-todo-btn {
-    margin: 32px;
-    padding: 8px 20px;
-    background-color: #bcb5f7;
-    border: 0;
-    border-radius: 8px;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-
-.delete-todo-btn {
-    padding: 8px 20px;
-    background-color: #f0683f;
-    border: 0;
-    border-radius: 8px;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-
-#close-form-btn {
-    font-size: 24px;
-    color: red;
-    display: flex;
-    justify-content: flex-end;
-    cursor: pointer;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #main {
-    max-width: 400px;
-    margin: 20px auto;
+  display: flex;
+  align-items: center;
+}
+
+#create-todo-btn {
+  margin: 32px;
+  padding: 8px 20px;
+  border: 0;
+  cursor: pointer;
+}
+
+.delete-todo-btn {
+  padding: 8px 20px;
+  border: 0;
+  cursor: pointer;
+}
+
+#close-form-btn {
+  font-size: 24px;
+  color: red;
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+#main {
+  max-width: 400px;
+  margin: 20px auto;
 }
 
 form {
-    display: none;
-    padding: 8px;
+  display: none;
+  padding: 8px;
 }
 
-input, textarea {
-    margin: 4px 0;
-    display: block;
-    width: 100%;
-    padding: 8px 0;
+input,
+textarea {
+  margin: 4px 0;
+  display: block;
+  width: 100%;
+  padding: 8px 0;
 }
 
 #addTodo {
-    margin-top: 10px;
-    padding: 8px 20px;
-    background-color: #56f348;
-    border: 0;
-    border-radius: 8px;
-    text-transform: uppercase;
-    cursor: pointer;
+  margin-top: 10px;
+  padding: 8px 20px;
+  border: 0;
+  cursor: pointer;
 }
 
 .todo {
-    background-color: #f0f0f0;
-    border: 1px solid #cccccc;
-    padding: 10px;
-    margin-bottom: 10px;
-  }  
+  background-color: #f0f0f0;
+  border: 1px solid #cccccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
 
 form {
-    animation: fadeInDown 1s;
+  animation: fadeInDown 1s;
+  margin-bottom: 1rem;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
-  @keyframes fadeInDown {
-    from {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
