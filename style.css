@@ -2,6 +2,8 @@
 
 body {
     background: url('./background/luke-chesser-3rWagdKBF7U-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     max-width: 100vw;
     min-height: 100vh;
     margin: 0;
@@ -20,12 +22,17 @@ body {
 
 /* TODO FORM */
 #todo-form {
-    min-width: 400px;
-    max-width: 100%;
+    min-width: 500px;
     display: none;
     padding: .5rem;
     border-radius: .5rem;
     margin-bottom: 5rem;
+}
+
+@media screen and (max-width: 460px) {
+    #todo-form {
+        min-width: 70%;
+    }
 }
 
 input,
