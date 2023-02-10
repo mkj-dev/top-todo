@@ -94,6 +94,17 @@ label {
     margin-bottom: .75rem;
 }
 
+/* DEADLINE */
+.deadline-date {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.deadline-time-left {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
 /* ANIMATION */
 form {
     animation: fadeInDown 1s;
