@@ -83,7 +83,7 @@ label {
 .todo {
     border-radius: .5rem;
     min-width: 200px;
-    max-width: 768px;
+    max-width: 500px;
     /* IE6+ Compatibility */
     background: rgba(255, 255, 255, 0.3);
     background: -moz-linear-gradient(125deg, rgba(255, 255, 255, 0.3) 40%, rgba(131, 148, 172, 0.3) 100%);
