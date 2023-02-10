@@ -32,9 +32,9 @@ function getTimeLeftToDeadline(collection) {
         const deadlineTime = getTimeRemaining(new Date(collection[i][0], collection[i][1] - 1, collection[i][2]));
 
         const days = document.createElement('p');
-        days.setAttribute('class', 'time-left');
+        days.setAttribute('class', 'deadline-time-left');
         const hours = document.createElement('p');
-        hours.setAttribute('class', 'time-left');
+        hours.setAttribute('class', 'deadline-time-left');
 
         days.innerText = `Days left: ${deadlineTime['days']}`;
         hours.innerText = `Hours left: ${deadlineTime['hours']}`;
