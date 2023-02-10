@@ -40,14 +40,14 @@ function getTimeLeftToDeadline(collection) {
         hours.innerText = `Hours left: ${deadlineTime['hours']}`;
 
         if (deadlineTime['days'] > 5) {
-            days.style.color = '#228B22';
-            hours.style.color = '#228B22';
+            days.style.color = '#20F315';
+            hours.style.color = '#20F315';
         } else if (deadlineTime['days'] < 5 && deadlineTime['days'] > 1) {
-            days.style.color = '#ffff33';
-            hours.style.color = '#ffff33 ';
+            days.style.color = '#FBFB21';
+            hours.style.color = '#FBFB21 ';
         } else {
-            days.style.color = '#e60000';
-            hours.style.color = '#e60000';
+            days.style.color = '#FD0105';
+            hours.style.color = '#FD0105';
         }
 
         todoCollection[i].children[2].after(days);
