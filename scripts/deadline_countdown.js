@@ -39,6 +39,17 @@ function getTimeLeftToDeadline(collection) {
         days.innerText = `Days left: ${deadlineTime['days']}`;
         hours.innerText = `Hours left: ${deadlineTime['hours']}`;
 
+        if (deadlineTime['days'] > 5) {
+            days.style.color = '#228B22';
+            hours.style.color = '#228B22';
+        } else if (deadlineTime['days'] < 5 && deadlineTime['days'] > 1) {
+            days.style.color = '#ffff33';
+            hours.style.color = '#ffff33 ';
+        } else {
+            days.style.color = '#e60000';
+            hours.style.color = '#e60000';
+        }
+
         todoCollection[i].children[2].after(days);
         todoCollection[i].children[3].after(hours);
     }
